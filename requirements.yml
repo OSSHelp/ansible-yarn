@@ -1,0 +1,3 @@
+---
+- name: nodejs
+  src: https://oss.help/ansible/pub/roles/n/1/nodejs-stable.tar.gz

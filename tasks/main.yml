@@ -1,0 +1,27 @@
+---
+- name: install required packages
+  apt:
+    name:
+      - curl
+      - gnupg
+      - apt-transport-https
+    update_cache: yes
+    cache_valid_time: 86400
+
+- name: add pgp key
+  apt_key:
+    url: "{{ yarn_repo_key }}"
+    state: present
+
+- name: add repo
+  apt_repository:
+    repo: "{{ yarn_repo[yarn_version] }}"
+    state: present
+    filename: "{{ yarn_repo_file }}"
+
+- name: install yarn
+  apt:
+    name: yarn
+    update_cache: yes
+    install_recommends: no
+    cache_valid_time: 86400

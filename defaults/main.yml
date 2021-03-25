@@ -1,0 +1,8 @@
+---
+yarn_version: "stable"
+yarn_repo_key: "https://dl.yarnpkg.com/debian/pubkey.gpg"
+yarn_repo_file: "yarn.list"
+yarn_repo:
+  stable: "deb https://dl.yarnpkg.com/debian/ stable main"
+  rc: "deb https://dl.yarnpkg.com/debian/ rc main"
+  nightly: "deb https://nightly.yarnpkg.com/debian/ nightly main"
